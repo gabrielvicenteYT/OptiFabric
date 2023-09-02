@@ -52,7 +52,7 @@ minecraft {
 dependencies {
 	compile "com.google.guava:guava:23.5-jre"
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	mappings(legacy.yarn(project.minecraft_version, project.yarn_build))
 	modCompile ("net.fabricmc:fabric-loader-1.8.9:0.8.7+build.202006122116") {
 		exclude module: "guava"
 	}
